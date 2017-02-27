@@ -120,7 +120,7 @@ $SelectAirports_1=mysql_query("SELECT id,code FROM $Airports WHERE id='id',code=
 $SelectAirports_2=mysql_query("SELECT id,code FROM $Airports WHERE id='id',code='$ItineraryOption_To'");
 $resultSelectFromAirports=mysql_query($SelectAirports_1,$SelectAirports_2) or die ("Error".mysql_error());
  $InsertIntoFlights= ("INSERT INTO $Flights(id,from,to,back,start,stop,adult,infant,price) VALUES('$FlightSegment','$ItineraryOption_From','$ItineraryOption_To','1','$Departure','$Departure','$PaxTypeADT','$PaxTypeINF','$Price')");	
-
+$resultInsertIntoFlights=mysql_query($InsertIntoFlights) or die ("Error".mysql_error());
 
 }else
 {
